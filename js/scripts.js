@@ -11,3 +11,22 @@
 // @codekit-prepend "plugins.js";
 
 // My Scripts
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Cheney, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+
+      $(".city").html(weather.city);
+			$(".temp").html(weather.temp);
+      $('i').addClass( 'icon-' + weather.code );
+
+    },
+    error: function(error) {
+      console().log( error );
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+
+});

@@ -31,6 +31,8 @@ $(document).ready(function() {
 			// $(" .cond-code").html(weather.currently);
       $("#spokane i").addClass( 'icon-' + weather.code );
 
+      $('#spokane .d1').html("<p>Tomorrows high: " + weather.forecast[1].high + "</p>");
+
 
       if (weather.temp < 50 ) {
           $("body").addClass("cold");
@@ -45,9 +47,8 @@ $(document).ready(function() {
       $("#weather").html('<p>'+error+'</p>');
     }
 
-
-
   });
+
   $.simpleWeather({
     location: 'Cheney, WA',
     woeid: '',
@@ -58,6 +59,7 @@ $(document).ready(function() {
 			$("#cheney .temp").html(weather.temp);
 			// $(" .cond-code").html(weather.currently);
       $("#cheney i").addClass( 'icon-' + weather.code );
+      $('#cheney .d1').html("<p>Tomorrows high: " + weather.forecast[1].high + "</p>");
     },
 
     error: function(error) {
@@ -65,10 +67,7 @@ $(document).ready(function() {
     }
   });
 
-
-
 });
-
 
 
 
@@ -86,6 +85,8 @@ if ('geolocation' in navigator) {
   $('.geolocation').show();
 } else {
   $('.geolocation').hide();
+  $('#anyCity').prepend('<p>Sorry, Geolocation is not supported</p>');
+
 }
 
 
@@ -110,9 +111,10 @@ var getWeather = function(location) {
     success: function(weather) {
 
       // Display Data
-      $('.temp').text(weather.temp);
-      $('.city').text(weather.city);
+      $('#anyCity .temp').text(weather.temp);
+      $('#anyCity .city').text(weather.city);
       $("#anyCity i").addClass( 'icon-' + weather.code );
+      $('#anyCity .d1').html("<p>Tomorrows high: " + weather.forecast[1].high + "</p>");
 
       // Entire weather object
       console.log();

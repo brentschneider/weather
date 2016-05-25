@@ -26,7 +26,9 @@
 
 
 
-	<title>Web 3 Starter Starter</title>
+	<title>Weather example</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
 
 	<!-- Compiled Stylesheet -->
 	<link rel="stylesheet" href="css-min/styles.min.css">
@@ -132,18 +134,69 @@
 </head>
 
 <body>
-<navigation class="nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="weather.html">Weather</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</navigation>
-
-	<h1>About</h1>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js-min/jquery-2.2.2-min.js"><\/script>')</script>
-	<script src="js-min/scripts.min.js"></script></body>
+<div class="ui attached stackable menu">
+
+  <div class="ui container">
+    <!-- <a class="item" href="weather.html">
+      <i class="home icon"></i> Home
+    </a> -->
+    <a class="item" href="index.html">
+      <i class="sun layout icon"></i> Weather
+    </a>
+    <a class="item" href="about.html">
+      <i class="smile icon"></i> About
+    </a>
+
+  </div>
+</div>
+
+<!-- Begin body copy -->
+<div class="ui raised very padded text container segment">
+
+	<h1>About the weather project</h1>
+
+  <h3>The Code Kit Language</h3>
+
+  <p>A *.kit file is HTML with special comments. Kit adds two things to HTML: imports and variables. CodeKit compiles Kit files into HTML, so the Kit language is great for building static sites.<p>
+
+  <h4>Imports:</h4>
+
+  <p>You can import any file, of <em>any</em> type, into a Kit file. The syntax is just like CSS:</p>
+
+  <pre>&lt;!-- @import "someFile.kit" --&gt;<br>&lt;!-- @import "file.html" --&gt;</pre>
+
+	<p>Tools:
+
+	<ul style="text-align:left">
+		<li><a href="http://semantic-ui.com/">semantic-ui</a></li>
+		<li><a href="http://simpleweatherjs.com">simpleweatherjs</a></li>
+		<li><a href="http://codepen.io/manikoth/pen/rxXrvb.css">Manicoth icons</a></li>
+	</ul>
+
+ </p>
+
+
+
+
+
+<!-- 2e3433 -->
+
+<br />
+
+<button class="ui animated fade button" onclick="location.href='https://github.com/brentschneider/weather';">
+	<div class="visible content"><i class="fork icon"></i></div>
+	<div class="hidden content">
+		github
+	</div>
+</button>
+<!-- end body copy -->
+</div>
+
+<!-- Begin scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js-min/jquery-2.2.2-min.js"><\/script>')</script>
+<script src="js-min/scripts.min.js"></script>
+</body>
 </html>

@@ -2,8 +2,30 @@
 <body>
 <!-- @import _nav -->
 
-	<h1>Check out the weather</h1>
+<h1>Check out the weather</h1>
+<div class="ui top attached tabular menu">
+  <a class="active item" data-tab="first">Cheney</a>
+  <a class="item" data-tab="second">Spokane</a>
+</div>
+<div class="ui bottom attached active tab segment" data-tab="first">
+  <ul class="io list weather" id="cheney">
+    <li class="item"><h1 class="city">City</h1></li>
 
+    <li class="item icon">
+        <i class=""></i>
+    </li>
+		<li class="item"><h2 class="temp"></h2></li>
+  </ul>
+</div>
+
+<div class="ui bottom attached tab segment" data-tab="second">
+  <ul class="io list weather" id="spokane">
+    <li class="item"><h1 class="city">City</h1></li>
+    <li class="item icon">
+    <i class=""></i></li>
+		<li class="item"><h2 class="temp"></h2></li>
+  </ul>
+</div>
 
 <!-- @import _scripts -->
 </body>

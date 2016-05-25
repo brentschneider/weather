@@ -33353,6 +33353,37 @@ i {
 }
 
 /* My Styles */
-#cheney i {
-  color: #ed243d;
+body {
+  background-color: #29323f;
+}
+
+.weather li {
+  list-style: none;
+  text-align: center;
+}
+
+.city {
+  padding-bottom: .5em;
+}
+
+.weather span, .weather h2 {
+  margin: 0;
+  padding: 0;
+  color: #858585;
+  font-family: 'Dosis', sans-serif;
+  font-size: 2em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+i {
+  color: #a10022;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: .55;
+  text-align: center;
+  text-transform: none;
 }
